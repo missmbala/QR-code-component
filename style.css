@@ -1,0 +1,42 @@
+body {
+    background-color: hsl(219, 74%, 86%);
+    font-family: "Outfit";
+    font-weight: 700;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+}
+
+.image-container {
+    align-self: center;
+}
+
+img {
+    border-radius: 15px;
+    width: 300px;
+}
+
+.text-container {
+    margin: 15px;
+    width: 300px;
+    align-self: center;
+}
+
+p {
+    color: gray;
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+@media (max-width: 375px) {
+    .flex-container {
+        width: 100%;
+    }
+}
