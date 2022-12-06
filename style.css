@@ -1,5 +1,17 @@
+* {
+    margin: 0;
+}
+
+:root {
+    
+    --lightGray: hsl(212, 45%, 89%);
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkBlue: hsl(218, 44%, 22%);
+    --font-s: 22px;
+}
+
 body {
-    background-color: hsl(219, 74%, 86%);
+    background-color: var(--lightGray);
     font-family: "Outfit";
     font-weight: 700;
 }
@@ -9,9 +21,17 @@ body {
     flex-direction: column;
     align-content: center;
     background-color: white;
-    padding: 20px;
-    border-radius: 15px;
+    /* use ems better than px so it will work in phone a pc without @media  */
+    width: 20em;
+    height: 31em;
+    border-radius: 20px;
     width: 350px;
+    /* to center the main container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .image-container {
@@ -19,8 +39,11 @@ body {
 }
 
 img {
-    border-radius: 15px;
-    width: 300px;
+    /* use % so when you resize the window it will take 90% from the 
+    parant element flex-container and so he is taking his width from the size of window  */
+  width: 90%;
+  border-radius: 10px;
+  margin: 20px ;
 }
 
 .text-container {
@@ -34,7 +57,7 @@ p {
     opacity: 0.6;
     font-size: 15px;
 }
-
+/* ? */
 @media (max-width: 375px) {
     .flex-container {
         width: 100%;
